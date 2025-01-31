@@ -3,7 +3,7 @@ const today = new Date();
 const currentYear = today.getFullYear();
 const currentMonth = today.getMonth();
 const currentDate = today.getDate();
-const imageBasePath = "image/icon/"; // 이미지 경로
+const imageBasePath = "./image/icon/"; // 이미지 경로
 
 let todayBirthdays = [];
 let totalMonthBirthdays = 0;
