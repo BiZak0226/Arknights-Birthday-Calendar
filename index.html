@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>Character Birthday Calendar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="calendar-container">
+        <div id="calendar-header">
+            <button id="prev-month">←</button>
+            <span id="current-month-year"></span>
+            <button id="next-month">→</button>
+        </div>
+        <div id="today-birthday"></div> <!-- 오늘 생일 표시 -->
+        <div id="calendar"></div>
+        <div id="month-birthday-count"></div> <!-- 이번 달 생일 수 표시 -->
+    </div>
+    <button id="save-button">달력을 이미지로 저장</button>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
+    <script src="script.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,158 @@
+/* 기본 스타일 */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f7f9fc;
+    color: #333;
+    flex-direction: column;
+
+}
+
+#calendar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+}
+
+/* 헤더 스타일 */
+#calendar-header {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+#prev-month, #next-month {
+    background-color: #ddd;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+#prev-month:hover, #next-month:hover {
+    background-color: #bbb;
+}
+
+/* 달력 스타일 */
+#calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 300px);
+    /* grid-auto-rows: 130px; */
+    gap: 1px;
+    background-color: #ddd;
+}
+.calendar-cell {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    font-size: 2rem;
+    overflow: hidden;
+    white-space: pre-wrap; /* 줄바꿈 적용 */
+    word-break: break-word; /* 단어가 너무 길면 자동 줄바꿈 */
+}
+
+
+/* 셀 스타일 */
+.cell {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #FFE;
+    box-sizing: border-box;
+    padding: 8px;
+    border: 2px solid #FF9;
+    text-align: center;
+    height: 220px;
+    overflow: hidden;
+    /* word-break: break-word; */
+}
+.cell.header{
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 80px;
+    background-color: #333;
+    color: #FFE;
+}
+#calendar .cell.header:nth-child(7){
+    background-color: #8CA;
+    color: #FFE;
+}
+.cell.header:first-of-type{
+    background-color: #922;
+    color: #FFE;
+}
+.cell.empty{
+    background-color: #FFF0;
+}
+
+/* 긴 텍스트 처리 */
+.cell span {
+    font-size: 2rem;
+    font-weight: bold;
+}
+.cell div {
+    font-size: 1.2rem;
+}
+#img-wrapper{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.cell img{
+    width: 80px;
+    margin:auto;
+}
+
+
+.cell.today span {
+    border: 2px solid #EA3;
+    background-color: #FB5;
+    border-radius: 10px;
+    padding: 0 10%;
+    box-shadow: 1px 1px #555D;
+}
+.cell.saturday span {
+    color: #8CA;
+}
+.cell.sunday span{
+    color: #922;
+}
+
+
+
+/* 저장 버튼 스타일 */
+#save-button {
+    margin-top: 16px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#save-button:hover {
+    background-color: #0056b3;
+}
+
